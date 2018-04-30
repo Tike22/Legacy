@@ -1,4 +1,15 @@
 1.	What county has the most manumissions?
+import pandas as pd
+import matplotlib.pyplot as plt
+%pylab inline
+
+df = pd.read_csv('Manumissions.csv')
+data = pd.DataFrame(df['County'].value_counts())
+data
+print('County with the most manumissions:', data.head(1))
+
+
+
 
 
 2.	Which slaveholder manumitted the most enslaved laborers?
