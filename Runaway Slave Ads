@@ -1,7 +1,7 @@
 1.	What newspaper contained the most runaway ads?
 runa = pd.read_csv('Runaway Slaves.csv')
-runa31 = runa['Source'].value_counts()
-runa31.head()
+runa1 = runa['Source'].value_counts()
+runa1.head()
 
 2.	What year and month had the most runaway ads found?
 
