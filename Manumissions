@@ -14,7 +14,13 @@ manu2 = manu['Owner_LastName'].value_counts()
 manu2.head(1)
 
 3.	What years are the most manumissions found?
+m = pd.read_csv("Manumissions.csv")
 
+for i in m['Date']:
+    if 'nan' in m['Date']: continue
+    print(i)
+    
+  #Still working on code 
 
 4.	Male vs female count of slaves manumitted.
 manu4 = manu['Sex'].value_counts()
