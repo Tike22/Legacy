@@ -8,10 +8,6 @@ data = pd.DataFrame(df['County'].value_counts())
 data
 print('County with the most manumissions:', data.head(1))
 
-
-
-
-
 2.	Which slaveholder manumitted the most enslaved laborers?
 manu = pd.read_csv('Manumissions.csv')
 manu2 = manu['Owner_LastName'].value_counts()
