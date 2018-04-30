@@ -13,4 +13,12 @@ runa1.head()
 
 
 5.	How many ads mention a family member or location where family may have lived?
+# Display of Ads
+fug_cata = runa[["fugative_destination","destination_catagory", "destination_justification"]]
+drop = fug_cata.dropna()
+loc_fam = drop.loc[drop['destination_catagory'] == "family"]
+loc_fam
 
+# Count Ads
+runa5=loc_fam.memory_usage()
+runa5
