@@ -1,4 +1,5 @@
 1.	What newspaper contained the most runaway ads?
+import pandas as pd
 runa = pd.read_csv('Runaway Slaves.csv')
 runa1 = runa['Source'].value_counts()
 runa1.head()
@@ -23,6 +24,9 @@ drop = fug_cata.dropna()
 loc_fam = drop.loc[drop['destination_catagory'] == "family"]
 loc_fam
 
-# Count Ads
+
+
+#Put code below in a new cell
+#Count Ads
 runa5=loc_fam.memory_usage()
 runa5
