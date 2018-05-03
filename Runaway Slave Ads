@@ -4,7 +4,7 @@ runa = pd.read_csv('Runaway Slaves.csv')
 runa1 = runa['Source'].value_counts()
 runa1.head()
 
-2.	What year and month had the most runaway ads found?
+2. What year and month had the most runaway ads found?
 
 
 3.	What are the ranges of ages of those mentioned?
