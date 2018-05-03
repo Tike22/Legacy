@@ -8,11 +8,22 @@ runa1.head()
 
 
 3.	What are the ranges of ages of those mentioned?
-a= []
-for age in m['Age']:
-    if age == 'NULL': continue
+import pandas as pd
+
+m = pd.read_csv('RunawaySlaveAds.csv')
+m = m['fugative_age']
+m = m.dropna()
+
+y =[]
+for e in d:
+    if len(e) > 2: continue
+    elif len(e) < 1: continue
+    elif e == " ": continue
     else:
-        a.append(age)
+        e = int(e)
+        y.append(e)
+print(max(y))
+print(min(y))
 
 4.	What are the ranges of rewards noted? Can we line up these values with a type or specific characteristic of enslaved laborer that was highly valued?
 
