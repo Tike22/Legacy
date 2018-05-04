@@ -19,17 +19,20 @@ for full in t['full_name']:
 print(count)
 
 2.	How many African Americans were free born vs enslaved, according to their certificate of freedom?
-# Code for African Americans that were enslaves
-import pandas as pd
-cert_free = pd.read_csv('Certificates of Freedom.csv')
-a=cert_free.dtypes
-cert_cat = cert_free[["Freed_FirstName", "Freed_LastName","PriorStatus"]]
-loc_ensl = cert_cat.loc[cert_cat['PriorStatus'] == "Enslaved"]
+# Code for African Americans that were enslaved
+cert_cat = h[["Freed_FirstName", "Freed_LastName","PriorStatus"]]
+lower_ensl = pd.DataFrame(cert_cat['PriorStatus'].str.lower())
+lower_ensl['PriorStatus'].replace(to_replace=['slave'],value='enslaved',inplace=True)
+loc_ensl = lower_ensl.loc[lower_ensl['PriorStatus'] == "enslaved"]
 a=len(loc_ensl)
 a
 
+#Put code below in a new cell
 #Code for African Americans that were Free Born
-loc_free = cert_cat.loc[cert_cat['PriorStatus'] == "Free born"]
+pd.set_option('mode.chained_assignment',None)
+lower_fb = pd.DataFrame(cert_cat['PriorStatus'].str.lower())
+lower_fb['PriorStatus'].replace(to_replace=['born free'],value='free born',inplace=True)
+loc_free = lower_fb.loc[lower_fb['PriorStatus'] == "free born"]
 b=len(loc_free)
 b
 
