@@ -1,5 +1,22 @@
 1.	How many recipients of certificates of freedom ALSO had a manumission record?
+import pandas as pd
+h = pd.read_csv('CertificatesofFreedom.csv', low_memory=False)
+h['full_name'] = h['Freed_FirstName'] + " " + h['Freed_LastName'].dropna()
+t = pd.read_csv("Manumissions.csv", low_memory=False)
+t['full_name'] = t['Slave_FirstName'] + " " + t['Slave_LastName']
 
+j = h['full_name'].dropna()
+b = []
+for name in j:
+    b.append(name)
+#print(b)
+
+count = 0
+for full in t['full_name']:
+    if full in b:
+        count += 1
+        print(full)
+print(count)
 
 2.	How many African Americans were free born vs enslaved, according to their certificate of freedom?
 # Code for African Americans that were enslaves
