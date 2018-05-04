@@ -2,7 +2,20 @@
 
 
 2.	How many African Americans were free born vs enslaved, according to their certificate of freedom?
+# Code for African Americans that were enslaves
+import pandas as pd
+cert_free = pd.read_csv('Certificates of Freedom.csv')
+a=cert_free.dtypes
+cert_cat = cert_free[["Freed_FirstName", "Freed_LastName","PriorStatus"]]
+count=cert_free['PriorStatus'].value_counts()
+loc_ensl = cert_cat.loc[cert_cat['PriorStatus'] == "Enslaved"]
+a=len(loc_ensl)
+a
 
+#Code for African Americans that were Free Born
+loc_free = cert_cat.loc[cert_cat['PriorStatus'] == "Free born"]
+b=len(loc_free)
+b
 
 3.	Which county recorded the most certificates of freedom? What were the names of the clerks that did the recording?
 
