@@ -26,7 +26,15 @@ print(max(y))
 print(min(y))
 
 4.	What are the ranges of rewards noted? Can we line up these values with a type or specific characteristic of enslaved laborer that was highly valued?
+o = pd.read_csv('RunawaySlaveAds.csv')
 
+v = o['reward_amount'].dropna()
+g = []
+for num in v:
+    if num.isdigit():
+        g.append(int(num))
+print(sorted(g)[1]) 
+print(sorted(g)[-1])
 
 5.	How many ads mention a family member or location where family may have lived?
 # Display of Ads
