@@ -5,7 +5,26 @@ runa1 = runa['Source'].value_counts()
 runa1.head()
 
 2. What year and month had the most runaway ads found?
+import pandas as pd
+pd = pd.read_csv('RunawaySlaveAds.csv')
+f = pd['ad_date']
+f = f.dropna()
 
+g = {}
+for ad in f:
+    ad = ad[:-2]
+    if ad not in g:
+        g[ad] = 1
+    else:
+        g[ad] += 1
+
+l = list()
+for key, val in g.items():
+    l.append((val,key))
+
+l.sort(reverse = True)
+
+print( l[1][1][0:4], l[1][1][4:6])
 
 3.	What are the ranges of ages of those mentioned?
 import pandas as pd
