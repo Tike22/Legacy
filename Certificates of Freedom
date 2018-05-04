@@ -7,7 +7,6 @@ import pandas as pd
 cert_free = pd.read_csv('Certificates of Freedom.csv')
 a=cert_free.dtypes
 cert_cat = cert_free[["Freed_FirstName", "Freed_LastName","PriorStatus"]]
-count=cert_free['PriorStatus'].value_counts()
 loc_ensl = cert_cat.loc[cert_cat['PriorStatus'] == "Enslaved"]
 a=len(loc_ensl)
 a
