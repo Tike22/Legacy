@@ -59,12 +59,13 @@ print(sorted(g)[-1])
 # Display of Ads
 fug_cata = runa[["fugative_destination","destination_catagory", "destination_justification"]]
 drop = fug_cata.dropna()
-loc_fam = drop.loc[drop['destination_catagory'] == "family"]
-loc_fam
+match_fam = drop [drop ['destination_catagory'].str.match('family')]
+match_fam
+
 
 
 
 #Put code below in a new cell
 #Count Ads
-runa5=loc_fam.memory_usage()
+runa5=match_fam.memory_usage()
 runa5
