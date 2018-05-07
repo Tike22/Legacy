@@ -37,6 +37,7 @@ b=len(loc_free)
 b
 
 3.	Which county recorded the most certificates of freedom? What were the names of the clerks that did the recording?
-
+county = h['County'].value_counts()
+county
 
 4.	What were the different age ranges of the slaves?
