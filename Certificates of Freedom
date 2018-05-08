@@ -18,7 +18,7 @@ for full in t['full_name']:
         print(full)
 print(count)
 
-2.	How many African Americans were free born vs enslaved, according to their certificate of freedom?
+2.	How many African Americans were free born vs enslaved, according to their certificate of freedom?  #Tamia will do graph
 # Code for African Americans that were enslaved
 cert_cat = h[["Freed_FirstName", "Freed_LastName","PriorStatus"]]
 lower_ensl = pd.DataFrame(cert_cat['PriorStatus'].str.lower())
