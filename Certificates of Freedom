@@ -41,3 +41,15 @@ county = h['County'].value_counts()
 county
 
 4.	What were the different age ranges of the slaves?
+import pandas as pd
+
+pd = pd.read_csv('CertificatesofFreedom.csv')
+c = pd['Age']
+c = c.dropna()
+
+y =[]
+for e in c:
+    e = int(e)
+    y.append(e)
+print(max(y))
+print(min(y))
