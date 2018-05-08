@@ -1,4 +1,4 @@
-1.	What county has the most manumissions?
+1.	What county has the most manumissions?  #Daniel did graph
 import pandas as pd
 import matplotlib.pyplot as plt
 %pylab inline
@@ -33,6 +33,6 @@ for key, val in d.items():
 l.sort(reverse = True)
 print('The year with the most Manumissions found was', l[1][1], 'with', l[1][0], 'found')
 
-4.	Male vs female count of slaves manumitted.
+4.	Male vs female count of slaves manumitted.   #Daniel did graph
 manu4 = manu['Sex'].value_counts()
 manu4.head()
