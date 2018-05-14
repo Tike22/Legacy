@@ -36,6 +36,18 @@ loc_free = lower_fb.loc[lower_fb['PriorStatus'] == "free born"]
 b=len(loc_free)
 b
 
+#Graph
+
+plotting = pd.merge(loc_free, loc_ensl, how='outer', left_on='Free', right_on='PriorStatus')
+f = plotting['Free'].append(plotting['PriorStatus'])
+f = f.to_frame(name = 'status')
+plotting
+pd.value_counts(f['status']).plot.bar()
+plt.ylabel('Number of African Americans', fontsize=15)
+plt.xlabel('Status', fontsize=15)
+plt.title('African Americans Born Free vs. Enslaved', fontsize= 15)
+plt.grid()
+
 3.	Which county recorded the most certificates of freedom? What were the names of the clerks that did the recording?
 county = h['County'].value_counts()
 county
